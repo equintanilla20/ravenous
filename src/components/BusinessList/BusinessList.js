@@ -4,6 +4,8 @@ import './BusinessList.css';
 import Business from '../Business/Business';
 
 class BusinessList extends React.Component {
+
+	// Render
 	render() {
 		return (
 			<div className="BusinessList">
@@ -14,7 +16,8 @@ class BusinessList extends React.Component {
 				}
 			</div>	
 		);
-	}
+	} // End render
 }
 
+// Export component
 export default BusinessList;

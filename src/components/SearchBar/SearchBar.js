@@ -10,7 +10,7 @@ class SearchBar extends React.Component {
 			location: '',
 			sortBy: 'best_match'
 		};
-
+		
 		this.handleTermChange = this.handleTermChange.bind(this);
 		this.handleLocationChange = this.handleLocationChange.bind(this);
 		this.handleSearch = this.handleSearch.bind(this);
@@ -21,32 +21,32 @@ class SearchBar extends React.Component {
 			'Highest Rated': 'rating',
 			'Most Reviewed': 'review_count'
 		};
-	}
+	} // End Constructor
 
 	getSortByClass(sortByOption) {
 		if (this.state.sortBy === sortByOption) {
 			return 'active';
 		} 
 		return '';
-	}
+	} // End getSortByClass
 	
 	handleSortByChange(sortByOption) {
 		this.setState({sortBy: sortByOption});
-	}
+	} // End handlerSortByChange
 
 	handleTermChange(event) {
 		this.setState({term: event.target.value});
-	}
+	} // End handleTermChange
 
 	handleLocationChange(event) {
 		this.setState({location: event.target.value});
-	}
+	} // End handleLocationChange
 
 	handleSearch(event) {
 		this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy);
 
 		event.preventDefault();
-	}
+	} // End handlerSearch
 
 	renderSortByOptions() {
 		return Object.keys(this.sortByOptions).map(sortByOption => {
@@ -57,8 +57,9 @@ class SearchBar extends React.Component {
 						    {sortByOption} 
 					   </li>);
 		});
-	}
+	} // End renderSortByOptions
 
+	// Render
 	render() {
 		return (
 			<div className="SearchBar">
@@ -76,7 +77,8 @@ class SearchBar extends React.Component {
 				</div>
 			</div>
 		);
-	}
+	} // End Render
 }
 
+// Export component
 export default SearchBar;

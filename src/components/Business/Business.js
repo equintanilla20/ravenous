@@ -2,6 +2,8 @@ import React from 'react';
 import './Business.css';
 
 class Business extends React.Component {
+
+	// Render
 	render() {
 		return (
 			<div className="Business">
@@ -23,7 +25,9 @@ class Business extends React.Component {
 				</div>
 			</div>
 		);
-	}
+	} // End Render
 }
 
+
+// Export component
 export default Business;
